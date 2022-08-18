@@ -1,38 +1,181 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: black;
+}
+.clear{
+  clear: both;
+}
+.celular{
+  position: absolute;
+   width: 425px;
+   height: 832px;
+   background-color: #EEF1F4;
+   border-radius:20px ;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.celular .visor{
+  position: absolute;
+  top: 0;
+  width: 90%;
+  margin: 30px auto;
+  height:293px ;
+  z-index: 1;
+  padding: 10px 30px;
+  
+}
+.celular .visor2{
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  margin: 30px auto;
+  height:293px ;
+  background-color: #C1CFD8;
+  filter: blur(30px);
+}
+
+.celular .visor .modos{
+  width:88px;
+  height: 38px;
+}
+.celular .visor .modos .light-ativado{
+  width: 49%;
+  height: 38px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  background-color: #3D3D3D;
+  float: left;
+  cursor: pointer;
+}
+
+.celular .visor .modos .light-ativado .sol{
+  width: 27px;
+  height: 27px;
+  margin: 4px auto;
+  background-image: url(./images/sun.png);
+  background-size: 100% 100%;
+}
+.celular .visor .modos .dark-desativado .lua{
+  width: 27px;
+  height: 27px;
+  margin: 4px auto;
+  background-image: url(./images/lua.png);
+  background-size: 100% 100%;
+}
+.celular .visor .modos .dark-desativado{
+  width: 49%;
+  height: 38px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background-color:transparent;
+  border: 1px solid white;
+  float: left;
+  cursor: pointer;
+}
+.celular .visor .resultado{
+  width: 110%;
+  height: 80px;
+  text-align: right;
+  margin: 0 auto;
+  margin-top: 140px;
+  font-size: 60px;
+}
+
+
+
+
+/*    TECLADOO     */
+.celular .teclado{
+  width: 98%;
+  height:470px ;
+  margin: 0 auto;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #D9DDE4;
+  padding: 20px;
+}
+.celular .teclado .numeros{
+  width: 100%;
+  height: 435px;
+  background-color: #D7DCE3;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul li{
+  list-style-type: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+button{
+  width: 61px;
+  height: 62px;
+  outline: none;
+  background-color: #FDFDFE;
+  border: none;
+  border-radius: 30px;
+  margin: 14px 13px;
+  cursor: pointer;
+}
+ul.quinta .zero{
+    text-align: left;
+    padding: 19px;
+    width: 153px;
+    height: 62px;
+    background-color: #EBEFF1;
+    color: #72727F;
+    border-radius: 30px;
+    font-size:20px;
+    font-weight: bold;
+    margin-right: 0;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  ul.quinta .ponto{
+    width: 70px;
+    height: 62px;
+    background-color: #EBEFF1;
+    border-radius: 30px;
+    font-size: 30px;
   }
-  to {
-    transform: rotate(360deg);
+
+  ul.quinta .igual{
+    width: 70px;
+    border-radius: 30px;
+    height: 62px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    font-size: 30px;
   }
-}
+
+  .celular .teclado .numeros ul.primeira button{
+    margin-top: 0;
+    border-radius: 12px;
+    background-color: #EBEFF1;
+    font-size: 20px;
+  }
+
+  .celular .teclado .numeros ul.segunda button:last-child{
+    border-radius: 12px;
+    background-color: #EBEFF1;
+    font-size: 20px;
+  }
+
+  .celular .teclado .numeros ul.terceira button:last-child{
+    border-radius: 12px;
+    background-color: #EBEFF1;
+    font-size: 30px;
+  }
+
+  .celular .teclado .numeros ul.quarta button:last-child{
+    border-radius: 12px;
+    background-color: #EBEFF1;
+    font-size: 30px;
+  }
+
+  .celular .teclado .numeros .numero-t{
+    font-size: 28px;
+  }
